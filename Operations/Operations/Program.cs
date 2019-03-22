@@ -1,8 +1,11 @@
-﻿using System;
+﻿using ClassLibrary;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Operations
@@ -11,59 +14,32 @@ namespace Operations
     {
         static void Main(string[] args)
         {
-            //定义一个随机数
-            Random random = new Random();
 
-            //运算符
-            string[] sy = { "+", "-", "÷", "×" };
-            string symbol = string.Empty;
-
-            int left = 0;
-            int right = 0;
-            int i = 0;
-
-            Console.Write("请输入题数：");
-            int ti = Int32.Parse(Console.ReadLine());
+            Console.Write("请输入出题数量：");
+            int number = Int32.Parse(Console.ReadLine());
             Console.Write("请输入范围：");
-            int fan = Int32.Parse(Console.ReadLine());
+            int scope = Int32.Parse(Console.ReadLine());
 
+            //用于保存题目到数组然后方便导入文本
+            string[] titlelist = new string[number];
+            //用于保存答案到数组然后方便导入文本
+            string[] answerlist = new string[number];
 
-            StreamWriter sw = new StreamWriter(@"E:\Exercise.txt");
-            StreamWriter sw1 = new StreamWriter(@"E:\Answer.txt");
-            for (int z = 0; z < ti; z++)
+            for(int y = 0; y < number; y++)
             {
+                string title = "";
+                string answer = "";
+                //把题目放到 title 传入参数
+                title = Show.ShowTopic(scope);
+                titlelist[y] = title;
+                //把答案放入 answer 传入参数
+                answer = Answer.AnswerText(title);
+                answerlist[y] = answer;
 
-                left = random.Next(1, fan);
-                right = random.Next(1, fan);
-             
-
-                symbol = sy[random.Next(0, 4)];
-
-                ////定义一个答案
-                int da = 0;
-
-                switch (symbol)
-                {
-                    case "-": da = left - right; break;
-                    case "+": da = left + right; break;
-                    case "÷": da = left / right; break;
-                    case "×": da = left * right; break;
-                }
-                //Console.WriteLine("{0}{3}{2}{1}", left, right, i, symbol);
-
-                Console.SetOut(sw);
-                Console.WriteLine("{0}{2}{1}={3}", left, right, symbol, da);
-                Console.SetOut(sw1);
-               
-                Console.WriteLine(da);
-
-
+                Thread.Sleep(100);
             }
-
-            sw.Flush();
-            sw.Close();
-            sw1.Flush();
-            sw1.Close();
+            //把题目导入文本
+            Console.WriteLine(ImportingText.Importing(titlelist, answerlist));
             Console.ReadKey();
         }
     }

@@ -5,3 +5,13 @@ E:\Operations\Operations\obj\Debug\Operations.csproj.CoreCompileInputs.cache
 E:\Operations\Operations\obj\Debug\Operations.exe
 E:\Operations\Operations\obj\Debug\Operations.pdb
 E:\Operations\Operations\obj\Debug\Operations.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\Operations\Operations\Operations\bin\Debug\Operations.exe.config
+C:\Users\Administrator\Desktop\Operations\Operations\Operations\bin\Debug\Operations.exe
+C:\Users\Administrator\Desktop\Operations\Operations\Operations\bin\Debug\Operations.pdb
+C:\Users\Administrator\Desktop\Operations\Operations\Operations\obj\Debug\Operations.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\Operations\Operations\Operations\obj\Debug\Operations.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Operations\Operations\Operations\obj\Debug\Operations.exe
+C:\Users\Administrator\Desktop\Operations\Operations\Operations\obj\Debug\Operations.pdb
+C:\Users\Administrator\Desktop\Operations\Operations\Operations\bin\Debug\ClassLibrary.dll
+C:\Users\Administrator\Desktop\Operations\Operations\Operations\bin\Debug\ClassLibrary.pdb
+C:\Users\Administrator\Desktop\Operations\Operations\Operations\obj\Debug\Operations.csproj.CopyComplete
